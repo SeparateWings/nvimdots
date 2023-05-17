@@ -57,7 +57,7 @@ local function load_options()
 		redrawtime = 1500,
 		relativenumber = true,
 		ruler = true,
-		scrolloff = 2,
+		scrolloff = 8,
 		sessionoptions = "buffers,curdir,help,tabpages,winsize",
 		shada = "!,'300,<50,@100,s10,h",
 		shiftround = true,

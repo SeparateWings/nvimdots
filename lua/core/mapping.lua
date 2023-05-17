@@ -53,6 +53,13 @@ local core_map = {
 	["v|K"] = map_cmd(":m '<-2<CR>gv=gv"):with_desc("edit: Move this line up"),
 	["v|<"] = map_cmd("<gv"):with_desc("edit: Decrease indent"),
 	["v|>"] = map_cmd(">gv"):with_desc("edit: Increase indent"),
+	-- User
+	["n|<A-j>"] = map_cmd(":m .+1<CR>=="):with_noremap(),
+	["n|<A-k>"] = map_cmd(":m .-2<CR>=="):with_noremap(),
+	["i|<A-j>"] = map_cmd("<Esc>:m .+1<CR>==gi"):with_noremap(),
+	["i|<A-k>"] = map_cmd("<Esc>:m .-2<CR>==gi"):with_noremap(),
+	["v|<A-j>"] = map_cmd(":m '>+1<CR>gv=gv"):with_noremap(),
+	["v|<A-k>"] = map_cmd(":m '>-2<CR>gv=gv"):with_noremap(),
 }
 
 bind.nvim_load_mapping(core_map)
